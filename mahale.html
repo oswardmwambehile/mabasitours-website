@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">  
+  <title>Mabasi Tours</title>
+  <link rel="icon" type="image/png" sizes="80x80" href="images/Mabasi Tours & Safaris Logo.png?v=1">
+</head>
+
+<body class="bg-gray-50">
+
+<div class="hidden md:block bg-[#ab8965] text-white py-5">
+  <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row md:justify-between md:items-center px-6 gap-4">
+
+    <!-- LEFT -->
+    <div class="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-6">
+
+      <div class="flex items-center space-x-2">
+        <i class="fa-solid fa-location-dot text-lg"></i>
+        <span class="text-sm md:text-base">Same - Kilimanjaro, Tanzania</span>
+      </div>
+
+      <div class="flex items-center space-x-2">
+        <i class="fa-solid fa-phone text-lg"></i>
+        <span class="text-sm md:text-base">+255 764 570 407</span>
+      </div>
+
+    </div>
+
+    <!-- RIGHT -->
+    <div class="flex items-center space-x-5">
+      <a href="#" class="hover:text-black transition text-lg">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <a href="#" class="hover:text-black transition text-lg">
+        <i class="fa-brands fa-facebook-f"></i>
+      </a>
+      <a href="#" class="hover:text-black transition text-lg">
+        <i class="fa-brands fa-linkedin-in"></i>
+      </a>
+      <a href="#" class="hover:text-black transition text-lg">
+    <i class="fa-brands fa-x-twitter"></i>
+  </a>
+    </div>
+
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<header class="bg-white text-gray-900 sticky top-0 z-50 shadow-md">
+
+    <div class="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
+
+        <!-- LOGO -->
+        <div class="flex items-center">
+            <a href="index.html">
+                <img src="images/Mabasi Tours & Safaris Logo.png" alt="Insurance Logo" class="h-16 w-auto">
+            </a>
+        </div>
+
+        <!-- MOBILE BUTTON -->
+        <button id="menu-btn" class="md:hidden text-3xl text-[#ab8965]">
+            <i class="fa fa-bars"></i>
+        </button>
+
+        <!-- MENU -->
+        <nav id="menu"
+            class="hidden md:flex absolute md:static top-20 left-0 w-full md:w-auto bg-white">
+
+            <ul class="flex flex-col md:flex-row gap-6 md:gap-8 p-6 md:p-0 font-medium">
+
+                <!-- HOME -->
+                <li><a href="index.html" class="hover:text-[#ab8965]">Home</a></li>
+               <!-- ABOUT US DROPDOWN -->
+                <li class="relative">
+                    <button onclick="toggleDropdown('aboutMenu')"
+                        class="flex items-center gap-2 hover:text-[#ab8965]">
+                        About Us <i class="fa fa-chevron-down text-xs"></i>
+                    </button>
+
+                    <ul id="aboutMenu"
+                        class="hidden absolute left-0 mt-4 bg-white text-black w-64 rounded shadow-lg p-4 space-y-2 z-50">
+                         <li><a href="about.html" class="block px-4 py-2 hover:bg-[#ab8965]">Overview</a></li>
+                        <li><a href="team.html" class="block px-4 py-2 hover:bg-[#ab8965]">Our Team</a></li>
+                        <li><a href="guide.html" class="block px-4 py-2 hover:bg-[#ab8965]">Our Guides</a></li>
+                        <li><a href="vehicle.html" class="block px-4 py-2 hover:bg-[#ab8965]">Our Vehicles</a></li>
+                        
+                        
+
+                    </ul>
+                </li>
+
+            
+
+                <!-- PRODUCTS & SERVICES -->
+                <li class="relative">
+                    <button onclick="toggleDropdown('productsMenu')"
+                        class="flex items-center gap-2 hover:text-[#ab8965]">
+                        Safari Packages <i class="fa fa-chevron-down text-xs"></i>
+                    </button>
+
+                    <ul id="productsMenu"
+                        class="hidden absolute left-0 mt-4 bg-white text-black w-72 rounded shadow-lg p-4 space-y-2 z-50">
+
+                        
+
+                         <li class="px-4 py-2 font-bold text-[#ab8965]">Luxury / VIP Safari</li>
+    <li>
+      <a href="vip-or-luxury.html"
+         class="block px-4 py-2 hover:bg-[#ab8965] cursor-pointer">
+        4★ Hotels & Luxury Tented Camps ($600–$850)
+      </a>
+    </li>
+
+    <li class="px-4 py-2 font-bold text-[#ab8965]">Mid-Range Safari</li>
+    <li>
+      <a href="mid_range.html"
+         class="block px-4 py-2 hover:bg-[#ab8965] cursor-pointer">
+        Comfortable Lodges ($450–$650)
+      </a>
+    </li>
+
+    <li class="px-4 py-2 font-bold text-[#ab8965]">Budget Safari</li>
+    <li>
+      <a href="budget-compagin.html"
+         class="block px-4 py-2 hover:bg-[#ab8965] cursor-pointer">
+        Camping Safari Experience
+      </a>
+    </li>
+
+    <li>
+      <a href="budget-compagin.html"
+         class="block px-4 py-2 hover:bg-[#ab8965] cursor-pointer">
+        1–8 Days Safari Packages
+      </a>
+    </li>
+
+                    </ul>
+                </li>
+<!-- PRODUCTS & SERVICES -->
+<li class="relative">
+  <button onclick="toggleDropdown('destinationMenu')"
+    class="flex items-center gap-2 hover:text-[#ab8965]">
+    Destinations <i class="fa fa-chevron-down text-xs"></i>
+  </button>
+
+  <ul id="destinationMenu"
+    class="hidden absolute left-0 mt-4 bg-white text-black w-72 rounded shadow-xl py-2
+           max-h-[85vh] overflow-y-auto z-50">
+
+    <li><a href="mkomazi.html" class="block px-4 py-2 hover:bg-[#ab8965]">Mkomazi National Park</a></li>
+    <li><a href="tarangire.html" class="block px-4 py-2 hover:bg-[#ab8965]">Tarangire National Park</a></li>
+    <li><a href="serengeti.html" class="block px-4 py-2 hover:bg-[#ab8965]">Serengeti National Park</a></li>
+    <li><a href="ngorongoro.html" class="block px-4 py-2 hover:bg-[#ab8965]">Ngorongoro Crater</a></li>
+    <li><a href="manyara.html" class="block px-4 py-2 hover:bg-[#ab8965]">Lake Manyara National Park</a></li>
+    <li><a href="arusha.html" class="block px-4 py-2 hover:bg-[#ab8965]">Arusha National Park</a></li>
+    <li><a href="eyasi.html" class="block px-4 py-2 hover:bg-[#ab8965]">Lake Eyasi (Hadzabe & Datoga)</a></li>
+    <li><a href="kilimanjaro.html" class="block px-4 py-2 hover:bg-[#ab8965]">Mount Kilimanjaro</a></li>
+    <li><a href="mikumi.html" class="block px-4 py-2 hover:bg-[#ab8965]">Mikumi National Park</a></li>
+    <li><a href="saadani.html" class="block px-4 py-2 hover:bg-[#ab8965]">Saadani National Park</a></li>
+    <li><a href="nyerere.html" class="block px-4 py-2 hover:bg-[#ab8965]">Nyerere National Park</a></li>
+    <li><a href="selous.html" class="block px-4 py-2 hover:bg-[#ab8965]">Selous Game Reserve</a></li>
+    <li><a href="mahale.html" class="block px-4 py-2 hover:bg-[#ab8965]">Mahale National Park</a></li>
+    <li><a href="gombe.html" class="block px-4 py-2 hover:bg-[#ab8965]">Gombe National Park</a></li>
+    <li><a href="chato.html" class="block px-4 py-2 hover:bg-[#ab8965]">Bridge Chato</a></li>
+    <li><a href="kitulo.html" class="block px-4 py-2 hover:bg-[#ab8965]">Kitulo National Park</a></li>
+    <li><a href="rubondo.html" class="block px-4 py-2 hover:bg-[#ab8965]">Rubondo Island</a></li>
+    <li><a href="beach.html" class="block px-4 py-2 hover:bg-[#ab8965]">Beach Holiday</a></li>
+
+  </ul>
+</li>
+
+                <!-- MEDIA -->
+                <li class="relative">
+                    <button onclick="toggleDropdown('cultureMenu')"
+                        class="flex items-center gap-2 hover:text-[#ab8965]">
+                        Cultural Tours<i class="fa fa-chevron-down text-xs"></i>
+                    </button>
+
+                    <ul id="cultureMenu"
+                        class="hidden absolute left-0 mt-4 bg-white text-black w-64 rounded shadow-lg p-4 space-y-2 z-50">
+
+                        <li>
+                        <a href="maasai.html" class="block px-4 py-2 hover:bg-[#ab8965]">
+                            Maasai Culture Experience
+                        </a>
+                        </li>
+
+                        <li>
+                        <a href="pare.html" class="block px-4 py-2 hover:bg-[#ab8965]">
+                            Pare Lifestyle Tour
+                        </a>
+                        </li>
+
+                        <li>
+                        <a href="hadzabe.html" class="block px-4 py-2 hover:bg-[#ab8965]">
+                            Hadzabe & Datoga Experience
+                        </a>
+                        </li>
+                        <li>
+                        <a href="arusha-culture.html" class="block px-4 py-2 hover:bg-[#ab8965]">
+                            Arusha Culture
+                        </a>
+                        </li>
+                        <li>
+                        <a href="manyara-coffee.html" class="block px-4 py-2 hover:bg-[#ab8965]">
+                            Manyara Coffee Walk
+                        </a>
+                        </li>
+                        <li>
+                        <a href="ambon.html" class="block px-4 py-2 hover:bg-[#ab8965]">
+                            Ambon Cultural
+                        </a>
+                        </li>
+                        <li>
+                        <a href="gombe-musems.html" class="block px-4 py-2 hover:bg-[#ab8965]">
+                            Gombe Ujiji Musems
+                        </a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- MEDIA -->
+                <li class="relative">
+                    <button onclick="toggleDropdown('mediaMenu')"
+                        class="flex items-center gap-2 hover:text-[#ab8965]">
+                        Media <i class="fa fa-chevron-down text-xs"></i>
+                    </button>
+
+                    <ul id="mediaMenu"
+                        class="hidden absolute left-0 mt-4 bg-white text-black w-64 rounded shadow-lg p-4 space-y-2 z-50">
+
+                        <li><a href="blog.html" class="block hover:text-[#ab8965]">News & Events</a></li>
+                        <li><a href="videos.html" class="block hover:text-[#ab8965]">Video Gallery</a></li>
+                         <li><a href="gallarey.html" class="block hover:text-[#ab8965]">Photo Gallery</a></li>
+                        <li><a href="resources.html" class="block hover:text-[#ab8965]">Resources & Downloads</a></li>
+
+                    </ul>
+                </li>
+
+                
+
+                <!-- CONTACT -->
+                <li class="relative">
+                    <button onclick="toggleDropdown('contactMenu')"
+                        class="flex items-center gap-2 hover:text-[#ab8965]">
+                        Contact Us <i class="fa fa-chevron-down text-xs"></i>
+                    </button>
+
+                    <ul id="contactMenu"
+                        class="hidden absolute left-0 mt-4 bg-white text-black w-56 rounded shadow-lg p-4 space-y-2 z-50">
+
+                        <li><a href="contact.html" class="block hover:text-[#ab8965]">Contacts</a></li>
+                        <li><a href="quote.html" class="block hover:text-[#ab8965] font-semibold">Quick Quote</a></li>
+
+                    </ul>
+                </li>
+
+            </ul>
+        </nav>
+
+    </div>
+</header>
+<script>
+    const btn = document.getElementById("menu-btn");
+    const menu = document.getElementById("menu");
+
+    btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+    });
+
+    function toggleDropdown(id) {
+        const dropdown = document.getElementById(id);
+
+        document.querySelectorAll("ul[id$='Menu']").forEach(el => {
+            if (el.id !== id) el.classList.add("hidden");
+        });
+
+        dropdown.classList.toggle("hidden");
+    }
+
+    document.addEventListener("click", function (e) {
+        if (!e.target.closest("li")) {
+            document.querySelectorAll("ul[id$='Menu']").forEach(el => {
+                el.classList.add("hidden");
+            });
+        }
+    });
+</script>
+
+<section class="relative w-screen h-[45vh] md:h-[75vh] overflow-hidden">
+
+  <!-- IMAGE -->
+  <img src="images/baboons.jpg"
+       class="w-full h-full object-cover object-center"
+       alt="Safari">
+
+  <!-- LIGHT EFFECT -->
+  <div class="absolute inset-0 pointer-events-none">
+    <div class="absolute w-[400px] h-[400px] bg-[#ab8965] blur-3xl opacity-20 top-[-100px] left-[-100px]"></div>
+    <div class="absolute w-[300px] h-[300px] bg-[#fbab1c] blur-3xl opacity-20 bottom-[-100px] right-[-100px]"></div>
+  </div>
+
+</section>
+
+<section class="py-7 bg-white">
+
+  <div class="w-[90%] mx-auto">
+
+    <!-- HEADER -->
+    <div class="mb-14">
+
+      <h2 class="text-2xl md:text-3xl text-black leading-tight"
+          data-aos="fade-up">
+        MAHALE MOUNTAINS NATIONAL PARK
+      </h2>
+
+      <p class="text-[#ab8965] uppercase tracking-[0.35em] text-sm mt-4"
+         data-aos="fade-up" data-aos-delay="100">
+        The Hidden Home of Wild Chimpanzees
+      </p>
+
+      <p class="text-gray-700 mt-6 max-w-3xl text-base md:text-lg leading-relaxed"
+         data-aos="fade-up" data-aos-delay="200">
+
+        Discover one of Africa’s most remote and magical parks, where tropical rainforest meets the crystal-clear waters of Lake Tanganyika.
+        Mahale Mountains National Park is famous for its wild chimpanzee trekking experience in a truly untouched wilderness.
+
+      </p>
+
+    </div>
+
+    <!-- DISCOVER -->
+    <div class="mb-14">
+
+      <h3 class="text-2xl md:text-3xl text-gray-900 leading-tight mb-6"
+          data-aos="fade-up">
+        DISCOVER THE CHIMPANZEE PARADISE OF AFRICA
+      </h3>
+
+      <p class="text-gray-700 text-sm md:text-lg leading-relaxed max-w-5xl"
+         data-aos="fade-up" data-aos-delay="100">
+
+        Mahale Mountains is one of the few places in the world where wild chimpanzees live freely in dense rainforest mountains.  
+        With no roads inside the park, access is only by boat across Lake Tanganyika, making it one of Tanzania’s most exclusive safari destinations.
+
+        The combination of forest-covered mountains, white sandy beaches, and deep blue lake waters creates a surreal safari experience unlike anywhere else in Africa.
+
+      </p>
+
+    </div>
+
+    <!-- VISITING -->
+    <div class="mb-14">
+
+      <h3 class="text-2xl md:text-3xl text-gray-900 leading-tight mb-6"
+          data-aos="fade-up">
+        VISITING MAHALE MOUNTAINS NATIONAL PARK
+      </h3>
+
+      <p class="text-gray-700 text-sm md:text-lg leading-relaxed max-w-5xl">
+
+        <strong>Best Time to Visit</strong><br>
+
+        June to October (Dry Season): Best for chimpanzee trekking as they stay lower in the forest.<br>
+        November to May (Green Season): Lush rainforest, birdlife, and dramatic scenery.
+
+        <br><br>
+
+        <strong>Top Things to Do</strong><br>
+
+        <strong>Chimpanzee Trekking:</strong> Walk through rainforest to observe wild chimpanzees up close.<br>
+
+        <strong>Lake Tanganyika Swimming:</strong> Relax in one of the world’s deepest and clearest lakes.<br>
+
+        <strong>Forest Hiking:</strong> Explore tropical jungle trails with butterflies and exotic birds.
+
+      </p>
+
+    </div>
+
+    <!-- UNIQUE EXPERIENCE + WILDLIFE -->
+    <div class="mb-14">
+
+      <h3 class="text-2xl md:text-3xl text-black mb-6"
+          data-aos="fade-up">
+        Unique Experience of Mahale Mountains National Park
+      </h3>
+
+      <p class="text-gray-600 max-w-2xl mb-10"
+         data-aos="fade-up" data-aos-delay="100">
+
+        Mahale Mountains offers one of the most intimate wildlife encounters in Africa.  
+        Unlike traditional safari parks, here you trek on foot through dense rainforest to meet wild chimpanzees in their natural habitat.  
+        The park is also unique for combining mountain rainforest ecosystems with the crystal-clear beaches of Lake Tanganyika.
+
+      </p>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+        <!-- CHIMPANZEE -->
+        <div class="group relative rounded-3xl overflow-hidden shadow-2xl"
+             data-aos="fade-up">
+
+          <img src="images/chimpanzee.jpg"
+               class="w-full h-[240px] sm:h-[280px] md:h-[340px] object-cover group-hover:scale-110 transition duration-700">
+
+          <div class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition"></div>
+
+          <div class="absolute bottom-6 left-6 text-white">
+            <h3 class="text-xl font-bold">Chimpanzees</h3>
+            <p class="text-sm opacity-80">Wild primates living in rainforest</p>
+          </div>
+
+        </div>
+
+        <!-- RED COLOBUS MONKEY -->
+        <div class="group relative rounded-3xl overflow-hidden shadow-2xl"
+             data-aos="fade-up" data-aos-delay="100">
+
+          <img src="images/redch.jpg"
+               class="w-full h-[240px] sm:h-[280px] md:h-[340px] object-cover group-hover:scale-110 transition duration-700">
+
+          <div class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition"></div>
+
+          <div class="absolute bottom-6 left-6 text-white">
+            <h3 class="text-xl font-bold">Red Colobus Monkey</h3>
+            <p class="text-sm opacity-80">Rare forest primate species</p>
+          </div>
+
+        </div>
+
+        <!-- BLUE DUIKER -->
+        <div class="group relative rounded-3xl overflow-hidden shadow-2xl"
+             data-aos="fade-up" data-aos-delay="200">
+
+          <img src="images/blue.jpg"
+               class="w-full h-[240px] sm:h-[280px] md:h-[340px] object-cover group-hover:scale-110 transition duration-700">
+
+          <div class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition"></div>
+
+          <div class="absolute bottom-6 left-6 text-white">
+            <h3 class="text-xl font-bold">Blue Duiker</h3>
+            <p class="text-sm opacity-80">Tiny forest antelope in dense jungle</p>
+          </div>
+
+        </div>
+
+        <!-- BABOON TROOPS -->
+        <div class="group relative rounded-3xl overflow-hidden shadow-2xl"
+             data-aos="fade-up">
+
+          <img src="images/babon.webp"
+               class="w-full h-[240px] sm:h-[280px] md:h-[340px] object-cover group-hover:scale-110 transition duration-700">
+
+          <div class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition"></div>
+
+          <div class="absolute bottom-6 left-6 text-white">
+            <h3 class="text-xl font-bold">Olive Baboons</h3>
+            <p class="text-sm opacity-80">Social primates in forest edges</p>
+          </div>
+
+        </div>
+
+        <!-- TROPICAL BIRDS -->
+        <div class="group relative rounded-3xl overflow-hidden shadow-2xl"
+             data-aos="fade-up" data-aos-delay="100">
+
+          <img src="images/troopical.jpg"
+               class="w-full h-[240px] sm:h-[280px] md:h-[340px] object-cover group-hover:scale-110 transition duration-700">
+
+          <div class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition"></div>
+
+          <div class="absolute bottom-6 left-6 text-white">
+            <h3 class="text-xl font-bold">Tropical Birds</h3>
+            <p class="text-sm opacity-80">Colorful species in rainforest canopy</p>
+          </div>
+
+        </div>
+
+        <!-- LAKE TANGANYIKA FISH EAGLE -->
+        <div class="group relative rounded-3xl overflow-hidden shadow-2xl"
+             data-aos="fade-up" data-aos-delay="200">
+
+          <img src="images/egle.jpg"
+               class="w-full h-[240px] sm:h-[280px] md:h-[340px] object-cover group-hover:scale-110 transition duration-700">
+
+          <div class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition"></div>
+
+          <div class="absolute bottom-6 left-6 text-white">
+            <h3 class="text-xl font-bold">African Fish Eagle</h3>
+            <p class="text-sm opacity-80">Iconic predator of Lake Tanganyika</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="py-12 bg-white">
+
+  <div class="w-[90%] mx-auto">
+
+    <!-- HEADER -->
+    <div class="mb-10">
+
+      <h2 class="text-3xl md:text-4xl font-bold text-black"
+          data-aos="fade-up">
+        Tanzania Mabasi Tours & Safaris 
+      </h2>
+
+      <p class="text-gray-600 mt-4 max-w-2xl"
+         data-aos="fade-up" data-aos-delay="100">
+        Choose from carefully designed Tanzania safari experiences covering wildlife, landscapes, and culture.
+      </p>
+
+    </div>
+
+    <!-- SWIPER -->
+    <div class="swiper mySwiper">
+
+      <div class="swiper-wrapper">
+
+        <!-- 1 DAY -->
+        <div class="swiper-slide">
+          <div class="bg-white rounded-3xl shadow-xl overflow-hidden group relative">
+
+            <img src="images/babon.webp"
+                 class="h-56 w-full object-cover group-hover:scale-110 transition duration-700">
+
+            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition flex items-start justify-center pt-6">
+
+              <a href="1day-mkomazi.html"
+                 class="bg-[#ab8965] text-white px-4 py-2 rounded-full text-sm opacity-0 group-hover:opacity-100 transition">
+                View Itinerary
+              </a>
+
+            </div>
+
+            <div class="p-5">
+              <h3 class="font-bold text-lg">1 Day Safari</h3>
+              <p class="text-gray-600 text-sm mt-2">Mkomazi National Park</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 2 DAYS -->
+        <div class="swiper-slide">
+          <div class="bg-white rounded-3xl shadow-xl overflow-hidden group relative">
+
+            <img src="images/crodile1.jpg"
+                 class="h-56 w-full object-cover group-hover:scale-110 transition duration-700">
+
+            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition flex items-start justify-center pt-6">
+
+              <a href="2days-mkomazi-culture.html"
+                 class="bg-[#ab8965] text-white px-4 py-2 rounded-full text-sm opacity-0 group-hover:opacity-100 transition">
+                View Itinerary
+              </a>
+
+            </div>
+
+            <div class="p-5">
+              <h3 class="font-bold text-lg">2 Days Safari</h3>
+              <p class="text-gray-600 text-sm mt-2">Mkomazi + Cultural Tourism</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 2 DAYS TARANGIRE -->
+        <div class="swiper-slide">
+          <div class="bg-white rounded-3xl shadow-xl overflow-hidden group relative">
+
+            <img src="images/herd.webp"
+                 class="h-56 w-full object-cover group-hover:scale-110 transition duration-700">
+
+            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition flex items-start justify-center pt-6">
+
+              <a href="2days-tarangire-ngorongoro.html"
+                 class="bg-[#ab8965] text-white px-4 py-2 rounded-full text-sm opacity-0 group-hover:opacity-100 transition">
+                View Itinerary
+              </a>
+
+            </div>
+
+            <div class="p-5">
+              <h3 class="font-bold text-lg">2 Days Safari</h3>
+              <p class="text-gray-600 text-sm mt-2">Tarangire & Ngorongoro</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 3 DAYS -->
+        <div class="swiper-slide">
+          <div class="bg-white rounded-3xl shadow-xl overflow-hidden group relative">
+
+            <img src="images/climb.jpg"
+                 class="h-56 w-full object-cover group-hover:scale-110 transition duration-700">
+
+            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition flex items-start justify-center pt-6">
+
+              <a href="3days-manyara-tarangire-ngorongoro.html"
+                 class="bg-[#ab8965] text-white px-4 py-2 rounded-full text-sm opacity-0 group-hover:opacity-100 transition">
+                View Itinerary
+              </a>
+
+            </div>
+
+            <div class="p-5">
+              <h3 class="font-bold text-lg">3 Days Safari</h3>
+              <p class="text-gray-600 text-sm mt-2">Tarangire – Manyara – Ngorongoro</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 3 SERENGETI -->
+        <div class="swiper-slide">
+          <div class="bg-white rounded-3xl shadow-xl overflow-hidden group relative">
+
+            <img src="images/chimpanzee.jpg"
+                 class="h-56 w-full object-cover group-hover:scale-110 transition duration-700">
+
+            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition flex items-start justify-center pt-6">
+
+              <a href="3days-serengeti-ngorongoro.html"
+                 class="bg-[#ab8965] text-white px-4 py-2 rounded-full text-sm opacity-0 group-hover:opacity-100 transition">
+                View Itinerary
+              </a>
+
+            </div>
+
+            <div class="p-5">
+              <h3 class="font-bold text-lg">3 Days Safari</h3>
+              <p class="text-gray-600 text-sm mt-2">Serengeti & Ngorongoro</p>
+            </div>
+
+          </div>
+        </div>
+        <!-- 3 SERENGETI -->
+        <div class="swiper-slide">
+          <div class="bg-white rounded-3xl shadow-xl overflow-hidden group relative">
+
+            <img src="images/o (6).jpg"
+                 class="h-56 w-full object-cover group-hover:scale-110 transition duration-700">
+
+            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition flex items-start justify-center pt-6">
+
+              <a href="3days-serengeti-ngorongoro.html"
+                 class="bg-[#ab8965] text-white px-4 py-2 rounded-full text-sm opacity-0 group-hover:opacity-100 transition">
+                View Itinerary
+              </a>
+
+            </div>
+
+            <div class="p-5">
+              <h3 class="font-bold text-lg">4Days safari 3nights</h3>
+              <p class="text-gray-600 text-sm mt-2">Tarangire –Serengeti-Ngorongoro Crater</p>
+            </div>
+
+          </div>
+        </div>
+        <!-- 3 SERENGETI -->
+        <div class="swiper-slide">
+          <div class="bg-white rounded-3xl shadow-xl overflow-hidden group relative">
+
+            <img src="images/o (7).jpg"
+                 class="h-56 w-full object-cover group-hover:scale-110 transition duration-700">
+
+            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition flex items-start justify-center pt-6">
+
+              <a href="3days-serengeti-ngorongoro.html"
+                 class="bg-[#ab8965] text-white px-4 py-2 rounded-full text-sm opacity-0 group-hover:opacity-100 transition">
+                View Itinerary
+              </a>
+
+            </div>
+
+            <div class="p-5">
+              <h3 class="font-bold text-lg">5Days safari 4nights</h3>
+              <p class="text-gray-600 text-sm mt-2">Tarangire-Lake Manyara-Serengeti –Ngorongoro crater</p>
+            </div>
+
+          </div>
+        </div>
+        <!-- 3 SERENGETI -->
+        <div class="swiper-slide">
+          <div class="bg-white rounded-3xl shadow-xl overflow-hidden group relative">
+
+            <img src="images/o (9).jpg"
+                 class="h-56 w-full object-cover group-hover:scale-110 transition duration-700">
+
+            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition flex items-start justify-center pt-6">
+
+              <a href="3days-serengeti-ngorongoro.html"
+                 class="bg-[#ab8965] text-white px-4 py-2 rounded-full text-sm opacity-0 group-hover:opacity-100 transition">
+                View Itinerary
+              </a>
+
+            </div>
+
+            <div class="p-5">
+              <h3 class="font-bold text-lg">6Days safari 5nights</h3>
+              <p class="text-gray-600 text-sm mt-2">Arusha Park- Tarangire- Serengeti Migration –Ngorongoro–Lake Manyara National Park</p>
+            </div>
+
+          </div>
+        </div>
+        <!-- 3 SERENGETI -->
+        <div class="swiper-slide">
+          <div class="bg-white rounded-3xl shadow-xl overflow-hidden group relative">
+
+            <img src="images/ki (1).jpg"
+                 class="h-56 w-full object-cover group-hover:scale-110 transition duration-700">
+
+            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition flex items-start justify-center pt-6">
+
+              <a href="3days-serengeti-ngorongoro.html"
+                 class="bg-[#ab8965] text-white px-4 py-2 rounded-full text-sm opacity-0 group-hover:opacity-100 transition">
+                View Itinerary
+              </a>
+
+            </div>
+
+            <div class="p-5">
+              <h3 class="font-bold text-lg">7Days safari 6nights Tarangire-Serengeti </h3>
+              <p class="text-gray-600 text-sm mt-2">Ngorongoro –Lake Eyasi (hadzabe &
+Datoga) –lake Manyara</p>
+            </div>
+
+          </div>
+        </div>
+        <!-- 3 SERENGETI -->
+        <div class="swiper-slide">
+          <div class="bg-white rounded-3xl shadow-xl overflow-hidden group relative">
+
+            <img src="images/o (10).jpg"
+                 class="h-56 w-full object-cover group-hover:scale-110 transition duration-700">
+
+            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition flex items-start justify-center pt-6">
+
+              <a href="3days-serengeti-ngorongoro.html"
+                 class="bg-[#ab8965] text-white px-4 py-2 rounded-full text-sm opacity-0 group-hover:opacity-100 transition">
+                View Itinerary
+              </a>
+
+            </div>
+
+            <div class="p-5">
+              <h3 class="font-bold text-lg">8Days safari 7nights Arusha National Park</h3>
+              <p class="text-gray-600 text-sm mt-2">Tarangire –Serengeti-Ngorongoro –
+Lake Manyara </p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      
+     
+
+    </div>
+
+  </div>
+
+</section>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  loop: true,
+  grabCursor: true,
+
+  autoplay: {
+    delay: 3000,   // 3 seconds per slide
+    disableOnInteraction: false, // keeps autoplay after swipe
+  },
+
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  breakpoints: {
+    640: { slidesPerView: 2 },
+    1024: { slidesPerView: 3 }
+  }
+});
+</script>
+
+<footer class="bg-[#f2ebd8] pt-20 pb-10">
+
+  <div class="max-w-screen-xl mx-auto px-6">
+
+    <!-- TOP FOOTER GRID -->
+    <div class="grid md:grid-cols-4 gap-12 text-left">
+
+      <!-- COMPANY -->
+      <div>
+        <h3 class="text-sm font-bold uppercase tracking-widest text-black mb-4">
+          Mabasi Tours & Safaris
+        </h3>
+
+        <p class="text-gray-700 text-sm leading-relaxed">
+          Luxury VIP safaris, mid-range adventures, and budget camping experiences across Tanzania’s most iconic national parks. Founded by professional guide Juma Mabasi with 16+ years experience.
+        </p>
+      </div>
+
+      <!-- QUICK LINKS -->
+      <div>
+        <h3 class="text-sm font-bold uppercase tracking-widest text-black mb-4">
+          Quick Links
+        </h3>
+
+        <ul class="space-y-2 text-sm text-gray-700">
+          <li><a href="#" class="hover:text-black">Home</a></li>
+          <li><a href="#" class="hover:text-black">About Us</a></li>
+          <li><a href="#" class="hover:text-black">Safari Packages</a></li>
+          <li><a href="#" class="hover:text-black">Destinations</a></li>
+          <li><a href="#" class="hover:text-black">Cultural Tours</a></li>
+          <li><a href="#" class="hover:text-black">Contact</a></li>
+          <li><a href="#" class="hover:text-black">terms condtions</a></li>
+          <li><a href="#" class="hover:text-black">Privacy</a></li>
+        </ul>
+      </div>
+
+      <!-- SAFARI INFO -->
+      <div>
+        <h3 class="text-sm font-bold uppercase tracking-widest text-black mb-4">
+          Safari Options
+        </h3>
+
+        <ul class="space-y-2 text-sm text-gray-700">
+          <li>Luxury / VIP Safari (4★ Lodges)</li>
+          <li>Mid-Range Safari Comfort</li>
+          <li>Budget Camping Safari</li>
+          <li>1–8 Days Safari Packages</li>
+        </ul>
+      </div>
+
+      <!-- CONTACT -->
+<div>
+  <h3 class="text-sm font-bold uppercase tracking-widest text-black mb-4">
+    Contact Us
+  </h3>
+
+  <p class="text-sm text-gray-700 leading-relaxed">
+    Mabasi Tours & Safaris<br>
+    Address: P.O.BOX 192 <br>
+    Phone 1: +255 764 570 407<br>
+    Phone 2: +255 785 740 249<br>
+    Email: info@mabasitours.com<br>
+    Email: marketing@mabasitours.com
+  </p>
+
+  <p class="mt-4 text-sm text-gray-700">
+    Same – Kilimanjaro, Tanzania
+  </p>
+
+  <!-- SOCIAL MEDIA -->
+  <div class="mt-5 flex items-center space-x-4">
+    
+    <a href="#" target="_blank" class="text-gray-600 hover:text-[#E4405F] transition text-lg">
+      <i class="fab fa-instagram"></i>
+    </a>
+
+    <a href="#" target="_blank" class="text-gray-600 hover:text-[#1877F2] transition text-lg">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+
+    <a href="#" target="_blank" class="text-gray-600 hover:text-[#0A66C2] transition text-lg">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+
+    <a href="#" target="_blank" class="text-gray-600 hover:text-[#25D366] transition text-lg">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="#" target="_blank" class="text-gray-600 hover:text-[#25D366] transition text-lg">
+      <i class="fab fa-x-twitter"></i>
+    </a>
+
+  </div>
+</div>
+    </div>
+
+    <!-- DIVIDER -->
+    <div class="border-t border-black/10 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-700">
+
+      <p>
+        © 2026 Mabasi Tours & Safaris. All Rights Reserved.
+      </p>
+
+      <p class="mt-3 md:mt-0">
+        Developed by <span class="font-semibold text-black">Beys</span>
+      </p>
+
+    </div>
+
+  </div>
+
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+</script>
+</body>
+</html>

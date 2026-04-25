@@ -1,0 +1,22 @@
+name: Auto Deploy to cPanel
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Upload via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.0
+        with:
+          server: mabasitours.com
+          username: mabasisafari
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: /public_html/
